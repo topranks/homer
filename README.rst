@@ -1,6 +1,12 @@
 Homer - Configuration manager for network devices
 -------------------------------------------------
 
+This is a simple fork with the templates.py file changed to import the  ['ipaddr' module](https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters_ipaddr.html) from the Ansible project.
+
+Requires Ansible is installed on the system it is being run on.
+
+**********************************
+
 Homer allows to manage the lifecycle of the configuration for network devices, generating and deploying their
 configuration.
 
