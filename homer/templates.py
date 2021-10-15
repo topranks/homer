@@ -4,7 +4,10 @@ import os
 
 from typing import Mapping
 
+from ansible_collections.ansible.netcommon.plugins.filter.ipaddr import ipaddr
 import jinja2
+
+
 
 from homer.exceptions import HomerError
 
@@ -35,6 +38,9 @@ class Renderer:
             trim_blocks=True,
             lstrip_blocks=True,
             cache_size=0)
+
+        self._env.filters['ipaddr'] = ipaddr
+
 
     def render(self, template_name: str, data: Mapping) -> str:
         """Render a template with the given data.
